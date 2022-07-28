@@ -1,0 +1,9 @@
+@import 'abstracts/colors/colors.scss';
+.footer {
+  height: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  background-color: $c3;
+  display: flex;
+}
