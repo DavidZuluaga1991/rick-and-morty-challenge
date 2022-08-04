@@ -1,0 +1,8 @@
+<div class="card-basic {{ 'card-basic--' + position }}">
+  <div class="header-card {{ 'body-card--' + position }}">
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="body-card {{ 'body-card--' + position }}">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</div>

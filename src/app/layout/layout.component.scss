@@ -1,5 +1,9 @@
 @import 'abstracts/colors/colors.scss';
 .container {
-  min-height: calc(100% - 150px);
+  min-height: calc(100% - 200px);
   background-color: $c4;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }

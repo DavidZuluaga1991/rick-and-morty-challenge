@@ -1,0 +1,32 @@
+<div class="container-episode">
+  <div class="content-episodes">
+    <ng-container *ngFor="let episode of data">
+      <app-card-basic>
+        <div header class="header">
+          <h4 class="header__title">
+            {{ episode.name }}
+          </h4>
+          <p class="header__dimension">
+            {{ episode.episode }}
+          </p>
+        </div>
+        <div content class="content">
+          <h4 class="content__title">
+            Characters
+          </h4>
+          <div class="content__residents">
+            <ng-container *ngFor="let episode of episode.characters; let i = index">
+              <div class="resident" *ngIf="i < 9">
+                {{ episode | resident }}
+              </div>
+              <div class="resident" *ngIf="i === 9">
+                ...
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </app-card-basic>
+    </ng-container>
+  </div>
+  <app-pagination [pagination]="pagination" *ngIf="pagination" (actionPage)="getListEpisode($event)"></app-pagination>
+</div>

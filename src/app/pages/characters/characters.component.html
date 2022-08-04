@@ -1,0 +1,8 @@
+<div class="characters">
+  <div class="container">
+    <div class="container__card" *ngFor="let character of data">
+      <app-card-flip [data]="character"></app-card-flip>
+    </div>
+  </div>
+  <app-pagination [pagination]="pagination" *ngIf="pagination" (actionPage)="getListCharacter($event)"></app-pagination>
+</div>

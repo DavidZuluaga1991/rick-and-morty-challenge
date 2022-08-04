@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICharacter } from 'src/app/core/models/character/character.model';
 
 @Component({
   selector: 'app-card-flip',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardFlipComponent implements OnInit {
 
+  @Input() data?: ICharacter;
   constructor() { }
 
   ngOnInit(): void {

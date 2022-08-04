@@ -1,17 +1,15 @@
-export interface IResult {
-  codigo: string;
-  descripcion: string;
-}
+import { IPagination } from "../pagination/pagination.model";
+
 export interface IResultData <T> {
-  datos: T;
-  resultado: IResult;
+  info: IPagination;
+  results: T;
 }
 
 export class ResultData <T> implements IResultData<T> {
-  datos: T;
-  resultado: IResult;
+  results: T;
+  info: IPagination;
   constructor(result: IResultData<T>) {
-    this.datos = result.datos;
-    this.resultado = result.resultado;
+    this.info = result.info;
+    this.results = result.results;
   }
 }
