@@ -1,0 +1,51 @@
+@import 'abstracts/colors/colors.scss';
+.content-episodes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header {
+  width: 200px;
+  height: 68px;
+  color: $c1;
+  &__title {
+    text-align: center;
+    margin-bottom: 6px;
+    height: 38px;
+  }
+  &__type,
+  &__dimension {
+    text-align: center;
+    margin: 0;
+  }
+}
+.content {
+  width: 200px;
+  &__title {
+    text-align: center;
+    color: $c1;
+  }
+  &__residents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+}
+.resident {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $c11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c1;
+  cursor: pointer;
+  &:hover {
+    background-color: $c9;
+  }
+}

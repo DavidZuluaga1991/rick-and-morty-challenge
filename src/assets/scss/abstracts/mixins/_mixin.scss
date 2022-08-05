@@ -1,0 +1,19 @@
+@import './../colors/colors.scss';
+@mixin scroll($color: $c8) {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+      @include wh(8px);
+      -webkit-appearance: none;
+      background-color: $c0;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      height: 67px;
+      background-color: $color;
+  }
+  &::-webkit-scrollbar-track {
+      border-radius: 10px;
+  }
+}

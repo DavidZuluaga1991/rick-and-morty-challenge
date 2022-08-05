@@ -1,0 +1,27 @@
+@import 'abstracts/colors/colors.scss';
+.card-basic {
+  border-radius: 5px;
+  height: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  &--h {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: baseline;
+  }
+}
+.header-card {
+  background-color: $c7;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  &--h {
+    border-radius: 5px 0 0 5px;
+  }
+}
+.body-card {
+  background-color: $c10;
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+  &--h {
+    border-radius: 0 5px 5px 0;
+  }
+}

@@ -1,0 +1,107 @@
+@import 'abstracts/colors/colors.scss';
+.container-bar{
+	width: 100%;
+	max-width: 50px;
+	position: fixed;
+	left: 0;
+	top: 25%;
+  &--right {
+    right: 0;
+    left: auto;
+  }
+}
+.icon {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	transition: all 500ms ease;
+	color: #fff;
+  justify-content: center;
+  align-items: center;
+  &__toolbar {
+    position: absolute;
+    background: #1c1c1c;
+    padding: 0px 8px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+    top:12px;
+    left: 0px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    &:after{
+      position: absolute;
+      content: '';
+      border-left: 7px solid transparent;
+      border-right: 6px solid #1c1c1c;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      right: 100%;
+      top: 8px;
+    }
+    &--right {
+      left: auto;
+      right: 0;
+      &:after {
+        border-right: 7px solid transparent;
+        border-left: 6px solid #1c1c1c;
+        right: auto;
+        left: 100%;
+      }
+
+    }
+  }
+
+  &:hover {
+    background: #1c1c1c;
+  }
+
+  &:hover &__toolbar {
+    opacity: 1;
+    visibility: visible;
+    left: 64px;
+    &--right {
+      right: 64px;
+      left: auto;
+    }
+  }
+  &:nth-of-type(2n) {
+    background-color: $c9;
+  }
+  &:nth-of-type(2n+1) {
+    background-color: $c10;
+  }
+
+  &:first-child {
+    border-radius: 0 1rem 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 1rem 0;
+  }
+  &--right {
+    &:first-child {
+      border-radius: 1rem 0 0 0;
+    }
+    &:last-child  {
+      border-radius: 0 0 0 1rem;
+    }
+  }
+  // &--right{
+  //   &__toolbar {
+  //     left: auto;
+  //     right: 0;
+  //   }
+  //   &:hover &__toolbar {
+  //     right: 64px;
+  //   }
+  // }
+}

@@ -1,0 +1,35 @@
+<div class="container-location">
+  <div class="content-locations">
+    <ng-container *ngFor="let location of data">
+      <app-card-basic position="h">
+        <div header class="header">
+          <h4 class="header__title">
+            {{ location.name }}
+          </h4>
+          <p class="header__dimension">
+            {{ location.dimension }}
+          </p>
+          <p class="header__type">
+            {{ location.type }}
+          </p>
+        </div>
+        <div content class="content">
+          <h4 class="content__title">
+            Residents
+          </h4>
+          <div class="content__residents">
+            <ng-container *ngFor="let resident of location.residents; let i = index">
+              <div class="resident" *ngIf="i < 9">
+                {{ resident | resident }}
+              </div>
+              <div class="resident" *ngIf="i === 9">
+                ...
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </app-card-basic>
+    </ng-container>
+  </div>
+  <app-pagination [pagination]="pagination" *ngIf="pagination" (actionPage)="getListLocation($event)"></app-pagination>
+</div>

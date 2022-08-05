@@ -1,1 +1,14 @@
-<p>card-flip works!</p>
+<div class="flip-card" *ngIf="data">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{{ data.image }}" alt="Avatar" class="flip-card-front__image">
+      <div class="flip-card-front__status flip-card-front__status--{{ data.status | lowercase }}"></div>
+    </div>
+    <div class="flip-card-back">
+      <h4 class="flip-card-back__name">{{ data.name }}</h4>
+      <p class="flip-card-back__gender">{{ data.gender }}</p>
+      <p class="flip-card-back__status flip-card-back__status--{{ data.status | lowercase }}">{{ data.status }}</p>
+      <p class="flip-card-back__location">{{ data.location?.name }}</p>
+    </div>
+  </div>
+</div>
